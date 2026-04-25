@@ -2,4 +2,4 @@
 This is AI project by python
 This rippo is created by Abdelrahman Atef
 
-print("welcome")';
+message= "Welcome to Project"
