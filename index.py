@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 graph = {
     "Porta Nuova":                [("KFC Milano Duomo", 5)],
     "KFC Milano Duomo":           [("Porta Nuova", 5), ("Milano Centrale Station", 3), ("Navigli", 4)],
@@ -36,3 +36,23 @@ def bfs(start , goal):
     return "No solution found!"
 
 sol = bfs("Milano Centrale Station" , "Posillipo")
+def uniform_cost2(start,goal):
+    visited = []
+    fronter = [(0,start,[start])]
+    while len(fronter) > 0:
+        fronter.sort()
+        curr_cost, curr_city, curr_path = fronter.pop(0)
+        if curr_city == goal:
+            return (curr_path, curr_cost)
+        if curr_city not in visited:
+            visited.append(curr_city)
+            for child_city, child_cost in graph[curr_city]:
+                fronter.append((
+                    curr_cost + child_cost,
+                    child_city,
+                    curr_path + [curr_city]
+                ))
+                return"No Solution found!"
+            sol,cost = uniform_cost2("Milano Centrale Station","Posillipo")
+            print(f"{sol}\nTotal cost = {cost}")
+
