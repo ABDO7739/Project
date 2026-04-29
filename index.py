@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 graph = {
     "Porta Nuova":                [("KFC Milano Duomo", 5)],
     "KFC Milano Duomo":           [("Porta Nuova", 5), ("Milano Centrale Station", 3), ("Navigli", 4)],
